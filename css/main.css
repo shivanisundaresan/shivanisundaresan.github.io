@@ -1,7 +1,7 @@
 body {
     margin: 5% auto;
     background: #000000;
-    color: #bfbfbf;
+    color: #aea49f;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.8;
@@ -15,19 +15,19 @@ body {
 }
 
 code {
-    background: #bde3b5;
+    background: #447c9c;
     color: black;
 }
 
 a {
-    border-bottom: 1px solid #bde3b5;
-    color: #bde3b5;
+    border-bottom: 1px solid #447c9c;
+    color: #447c9c;
     text-decoration: none;
 }
 
 .just-link {
     border-bottom: none;
-    color: #bde3b5;
+    color: #447c9c;
     text-decoration: none;
 }
 
@@ -49,7 +49,8 @@ a:hover {
 }
 
 .box {
-    background: rgb(165, 159, 142);
+    background: #000000;
+    color: #aea49f;
     line-height: 1.8;
     margin: 2em auto;
     max-width: 400px;
@@ -58,28 +59,28 @@ a:hover {
 }
 
 .status-danger {
-    color: #ffffff;
+    color: #000000;
     background: #8b7d80;
     line-height: 2;
     padding: 1em;
 }
 
 .status-success {
-    color: #ffffff;
+    color: #000000;
     background: #84c099;
     line-height: 2;
     padding: 1em;
 }
 
 .status-warning {
-    color: #ffffff;
-    background: #ffdd57;
+    color: #000000;
+    background: #ec953a;
     line-height: 2;
     padding: 1em;
 }
 
 .status-info {
-    color: #ffffff;
+    color: #000000;
     background: #209cee;
     line-height: 2;
     padding: 1em;
