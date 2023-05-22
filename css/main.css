@@ -1,87 +1,63 @@
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('neuemachina-light.woff2') format('woff2'),
+         url('neuemachina-light.woff') format('woff');
+    /* Add other font formats if available */
+    font-weight: normal;
+    font-style: normal;
+}
 body {
-    margin: 5% auto;
-    background: #000000;
+    font-family: 'Neue Machina', Arial, sans-serif;
+    background-color: #000000;
     color: #aea49f;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.8;
-    margin: 2em auto;
-    max-width: 700px;
-    padding: 1em;
+    margin: 0;
+    padding: 1rem;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.menu {
-    float: right;
-}
-
-code {
-    background: #447c9c;
-    color: black;
-}
-
-a {
-    border-bottom: 1px solid #447c9c;
-    color: #447c9c;
+.profile-link {
     text-decoration: none;
 }
 
-.just-link {
-    border-bottom: none;
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.menu {
+    margin-top: 1rem;
+}
+
+.body-container {
+    background-color: #000000;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #aea49f;
+    font-size: 1.5rem;
+    margin-top: 0;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+a {
     color: #447c9c;
     text-decoration: none;
 }
 
 a:hover {
-    border-bottom: 0;
-}
-
-.profile-active {
-    margin: 10px;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-}
-
-.profile-inactive {
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-}
-
-.box {
-    background: #000000;
-    color: #aea49f;
-    line-height: 1.8;
-    margin: 2em auto;
-    max-width: 400px;
-    padding: 1em;
-    float: left;
-}
-
-.status-danger {
-    color: #000000;
-    background: #8b7d80;
-    line-height: 2;
-    padding: 1em;
-}
-
-.status-success {
-    color: #000000;
-    background: #84c099;
-    line-height: 2;
-    padding: 1em;
-}
-
-.status-warning {
-    color: #000000;
-    background: #ec953a;
-    line-height: 2;
-    padding: 1em;
-}
-
-.status-info {
-    color: #000000;
-    background: #209cee;
-    line-height: 2;
-    padding: 1em;
+    text-decoration: underline;
 }
