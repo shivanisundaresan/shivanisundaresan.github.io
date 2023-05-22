@@ -13,10 +13,6 @@ body {
     margin: 0;
     padding: 1rem;
     line-height: 1.6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
 }
 
 .profile-link {
@@ -35,7 +31,7 @@ body {
 }
 
 .body-container {
-    background-color: #000000;
+    background-color: #1f1f1f;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
