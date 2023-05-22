@@ -1,0 +1,89 @@
+
+body {margin: 5% auto; 
+    background: #000000; 
+    color: #bfbfbf; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+    font-size: 16px; 
+    line-height: 1.8; 
+    margin:2em auto;
+    max-width:700px;
+    padding:1em;
+}
+
+.menu{
+
+    float: right;
+}
+
+
+code {
+    background:  #bde3b5   ;
+    color: black;
+}
+
+a {
+    border-bottom: 1px solid #bde3b5 ;
+    color:  #bde3b5 ; 
+    text-decoration: none;
+}
+
+.just-link {
+    border-bottom:none;
+    color:  #bde3b5 ; 
+    text-decoration: none;
+}
+
+
+a:hover {
+    border-bottom: 0;
+}
+
+.profile-active{
+    margin: 10px ; 
+    border-radius: 100%;
+    width: 20%;
+}
+
+.profile-inactive{
+    
+    border-radius: 100%;
+    width: 10%;
+}
+
+.box{
+    background: rgb(165, 159, 142);
+    line-height: 1.8; 
+    margin:2em auto;
+    max-width:400px;
+    padding:1em;
+    float: left;
+}
+
+.status-danger{
+    color: #000000;;
+    background:#8b7d80;
+    line-height: 2; 
+    padding:1em;
+    
+}
+
+.status-success{
+    color: #000000;;
+    background:#84c099;
+    line-height: 2; 
+    padding:1em;
+}
+
+.status-warning{
+    color: #000000;;
+    background:#ffdd57;
+    line-height: 2; 
+    padding:1em;
+}
+
+.status-info{
+    color: #000000;;
+    background:#209cee;
+    line-height: 2; 
+    padding:1em;
+}
