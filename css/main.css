@@ -1,59 +1,81 @@
-@font-face {
-    font-family: 'Neue Machina';
-    src: url('neuemachina-light.woff2') format('woff2'),
-         url('neuemachina-light.woff') format('woff');
-    /* Add other font formats if available */
-    font-weight: normal;
-    font-style: normal;
-}
-body {
-    font-family: 'Neue Machina', Arial, sans-serif;
-    background-color: #000000;
-    color: #aea49f;
-    margin: 0;
-    padding: 1rem;
-    line-height: 1.6;
+/* Reset styles */
+html,
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
 
-.profile-link {
-    text-decoration: none;
+/* Dark mode styles */
+body {
+  background-color: #1e1e1e;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 120px;
+  height: 120px;
+  background-color: "/Users/Shivani/Desktop/shivanisundaresan.github.io/img/pfp.jpg";
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin: 0 auto 20px;
 }
 
-.menu {
-    margin-top: 1rem;
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
-.body-container {
-    background-color: #1f1f1f;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
 }
 
-h2 {
-    color: #aea49f;
-    font-size: 1.5rem;
-    margin-top: 0;
-    text-align: center;
+nav ul li {
+  margin-right: 20px;
 }
 
-p {
-    margin-bottom: 1rem;
-    text-align: center;
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-a {
-    color: #447c9c;
-    text-decoration: none;
+main section {
+  margin-bottom: 40px;
 }
 
-a:hover {
-    text-decoration: underline;
+main section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+main section h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
 }
