@@ -79,3 +79,12 @@ footer {
   text-align: center;
   margin-top: 40px;
 }
+
+a {
+  color: #a0d7d5; /* Set the desired color for the links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b7ddc3; /* Set the color for the links on hover */
+}
