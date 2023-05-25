@@ -9,7 +9,7 @@ li {
 
 /* Dark mode styles */
 body {
-  background-color: #1e1e1e;
+  background: radial-gradient(circle, #000000, #6e6d72);
   color: #fff;
   font-family: 'Inter', sans-serif;
 }
