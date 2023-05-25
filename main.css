@@ -28,7 +28,7 @@ header {
 .profile-pic {
   width: 120px;
   height: 120px;
-  background-image:"/Users/Shivani/Desktop/shivanisundaresan.github.io/img/pfp.jpg";
+  background-image: url("img/pfp.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
