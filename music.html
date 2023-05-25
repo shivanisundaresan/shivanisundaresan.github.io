@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="songVibesChart"></canvas>
+  <script>
+    // Spotify API credentials
+    const clientId = 'eaa936bc92494310b9a476e4fefcdb20';
+    const clientSecret = '08342abc092542728aff8063ab0026bd';
+
+    // Fetch recent tracks from Spotify API
+    fetch('https://accounts.spotify.com/api/token', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret)
+      },
+      body: 'grant_type=client_credentials'
+    })
+    .then(response => response.json())
+    .then(data => {
+      const accessToken = data.access_token;
+      
+      fetch('https://api.spotify.com/v1/me/player/recently-played', {
+        headers: {
+          'Authorization': 'Bearer ' + accessToken
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        const recentTracks = data.items;
+        const songVibes = recentTracks.map(track => {
+          const audioFeatures = track.track.audio_features;
+          const vibes = (audioFeatures.energy + audioFeatures.valence) / 2;
+          return {
+            name: track.track.name,
+            vibes: vibes
+          };
+        });
+
+        const ctx = document.getElementById('songVibesChart').getContext('2d');
+        new Chart(ctx, {
+          type: 'polarArea',
+          data: {
+            labels: songVibes.map(song => song.name),
+            datasets: [{
+              data: songVibes.map(song => song.vibes),
+              backgroundColor: [
+                'rgba(255, 99, 132, 0.7)',
+                'rgba(54, 162, 235, 0.7)',
+                'rgba(255, 206, 86, 0.7)',
+                'rgba(75, 192, 192, 0.7)',
+                'rgba(153, 102, 255, 0.7)',
+                'rgba(255, 159, 64, 0.7)',
+                'rgba(165, 239, 166, 0.7)',
+                'rgba(255, 146, 186, 0.7)'
+              ]
+            }]
+          },
+          options: {
+            plugins: {
+              legend: {
+                display: false
+              },
+              tooltip: {
+                callbacks: {
+                  label: context => `${songVibes[context.dataIndex].name}: ${songVibes[context.dataIndex].vibes}`
+                }
+              }
+            }
+          }
+        });
+      });
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  </script>
+</body>
+</html>
+
